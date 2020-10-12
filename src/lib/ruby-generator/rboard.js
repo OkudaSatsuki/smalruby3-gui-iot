@@ -119,5 +119,9 @@ export default function (Generator) {
         return `PWM.cycle(${buzzer}, 4)\n`;
     };
 
+    Generator.mrubyc_rboard_grove_buzzer_use = function (block) {
+        return `PWM.new()\nPWM.pin(16)\nPWM.start(2)\n`;
+    };
+    
     return Generator;
 }

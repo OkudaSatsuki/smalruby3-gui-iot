@@ -1037,6 +1037,8 @@ const rboard = function () {
         ${blockSeparator}
         <block type="mrubyc_rboard_grove_buzzer_ling">
         </block>
+        <block type="mrubyc_rboard_grove_buzzer_use">
+        </block>
     </category>
     `;
 };

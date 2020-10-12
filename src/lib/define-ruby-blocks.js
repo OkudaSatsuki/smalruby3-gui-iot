@@ -967,5 +967,16 @@ export default function (ScratchBlocks) {
         }
     };
 
+    ScratchBlocks.Blocks.mrubyc_rboard_grove_buzzer_use = {
+        init: function () {
+            this.jsonInit({
+                type: 'mrubyc_rboard_grove_buzzer_use',
+                message0: 'ブザーを使う',
+                category: ScratchBlocks.Categories.ruby,
+                extensions: ['colours_rboard', 'shape_statement']
+            });
+        }
+    };
+
     return ScratchBlocks;
 }
