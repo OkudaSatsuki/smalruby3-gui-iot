@@ -123,5 +123,10 @@ export default function (Generator) {
         return `PWM.new()\nPWM.pin(16)\nPWM.start(2)\n`;
     };
     
+    Generator.mrubyc_rboard_mcp9808_use = function (block) {
+        const variable = Generator.valueToCode(block, 'VARIABLE') || null;
+        return `${variable} = I2C.read(0x18, 0x05, 2)\n`;
+    };
+
     return Generator;
 }

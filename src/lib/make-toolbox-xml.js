@@ -1039,6 +1039,14 @@ const rboard = function () {
         </block>
         <block type="mrubyc_rboard_grove_buzzer_use">
         </block>
+        ${blockSeparator}
+        <block type="mrubyc_rboard_mcp9808_use">
+        <value name="VARIABLE">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+        </block>
     </category>
     `;
 };
