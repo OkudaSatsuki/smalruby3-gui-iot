@@ -128,5 +128,11 @@ export default function (Generator) {
         return `${variable} = I2C.read(0x18, 0x05, 2)\n`;
     };
 
+    Generator.mrubyc_rboard_mcp9808_temp = function (block) {
+        const temp_var = Generator.valueToCode(block, 'TEMP_VAR') || null;
+        const sensor_var = Generator.valueToCode(block, 'SENSOR_VAR') || null;
+        return `${temp_var} = ${sensor_var}[1] | ((${sensor_var}[0] & 0x1f) << 8)\n${temp_var} = (${temp_var}.to_f) * 0.0625\n`;
+    };
+
     return Generator;
 }

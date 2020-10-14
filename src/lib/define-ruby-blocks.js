@@ -995,6 +995,26 @@ export default function (ScratchBlocks) {
         }
     };
     
+    ScratchBlocks.Blocks.mrubyc_rboard_mcp9808_temp = {
+        init: function () {
+            this.jsonInit({
+                type: 'mrubyc_rboard_mcp9808_temp',
+                message0: '%1に%2を温度に変換した値を格納',
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'TEMP_VAR'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'SENSOR_VAR'
+                    }
+                ],
+                category: ScratchBlocks.Categories.ruby,
+                extensions: ['colours_rboard', 'shape_statement']
+            });
+        }
+    };
 
     return ScratchBlocks;
 }
