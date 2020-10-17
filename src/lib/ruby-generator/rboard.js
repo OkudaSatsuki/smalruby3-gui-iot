@@ -138,5 +138,10 @@ export default function (Generator) {
         return `${variable} = I2C.read(0x18, 0x05, 2)\n`;
     };
 
+    Generator.mrubyc_rboard_sermista_temp = function (block) {
+        const variable = Generator.valueToCode(block, 'VARIABLE') || null;
+        return `${variable} = 1.0 / (Math.log(a) / 4275 + 1 / 298.15) - 273.15\n`;
+    };
+
     return Generator;
 }

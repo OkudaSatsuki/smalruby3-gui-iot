@@ -1027,5 +1027,22 @@ export default function (ScratchBlocks) {
         }
     };
 
+    ScratchBlocks.Blocks.mrubyc_rboard_sermista_temp = {
+        init: function () {
+            this.jsonInit({
+                type: 'mrubyc_rboard_sermista_temp',
+                message0: '%1に現在の温度計の温度(サーミスタ温度センサ)を格納',
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'VARIABLE'
+                    }
+                ],
+                category: ScratchBlocks.Categories.ruby,
+                extensions: ['colours_rboard', 'shape_statement']
+            });
+        }
+    };
+
     return ScratchBlocks;
 }
