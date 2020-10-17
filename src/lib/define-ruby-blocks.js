@@ -982,13 +982,7 @@ export default function (ScratchBlocks) {
         init: function () {
             this.jsonInit({
                 type: 'mrubyc_rboard_mcp9808_use',
-                message0: '%1に現在の温度計の値を格納',
-                args0: [
-                    {
-                        type: 'input_value',
-                        name: 'VARIABLE'
-                    }
-                ],
+                message0: '温度計を使う',
                 category: ScratchBlocks.Categories.ruby,
                 extensions: ['colours_rboard', 'shape_statement']
             });
@@ -1008,6 +1002,23 @@ export default function (ScratchBlocks) {
                     {
                         type: 'input_value',
                         name: 'SENSOR_VAR'
+                    }
+                ],
+                category: ScratchBlocks.Categories.ruby,
+                extensions: ['colours_rboard', 'shape_statement']
+            });
+        }
+    };
+
+    ScratchBlocks.Blocks.mrubyc_rboard_mcp9808_measure = {
+        init: function () {
+            this.jsonInit({
+                type: 'mrubyc_rboard_mcp9808_use',
+                message0: '%1に現在の温度計の値を格納',
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'VARIABLE'
                     }
                 ],
                 category: ScratchBlocks.Categories.ruby,

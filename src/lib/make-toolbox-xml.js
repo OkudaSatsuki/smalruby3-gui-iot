@@ -1041,11 +1041,6 @@ const rboard = function () {
         </block>
         ${blockSeparator}
         <block type="mrubyc_rboard_mcp9808_use">
-            <value name="VARIABLE">
-                <shadow type="text">
-                    <field name="TEXT"></field>
-                </shadow>
-            </value>
         </block>
         <block type="mrubyc_rboard_mcp9808_temp">
             <value name="TEMP_VAR">
@@ -1054,6 +1049,13 @@ const rboard = function () {
                 </shadow>
             </value>
             <value name="SENSOR_VAR">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mrubyc_rboard_mcp9808_measure">
+            <value name="VARIABLE">
                 <shadow type="text">
                     <field name="TEXT"></field>
                 </shadow>
