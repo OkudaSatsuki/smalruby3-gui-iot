@@ -143,5 +143,10 @@ export default function (Generator) {
         return `${variable} = 1.0 / (Math.log(a) / 4275 + 1 / 298.15) - 273.15\n`;
     };
 
+    Generator.mrubyc_rboard_sermista_measure = function (block) {
+        const variable = Generator.valueToCode(block, 'VARIABLE') || null;
+        return `${variable}.start\n${variable} = ${variable}.read_v\n${variable}.stop\n`;
+    };
+
     return Generator;
 }

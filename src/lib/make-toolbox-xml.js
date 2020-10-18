@@ -1069,6 +1069,13 @@ const rboard = function () {
                 </shadow>
             </value>
         </block>
+        <block type="mrubyc_rboard_sermista_measure">
+            <value name="VARIABLE">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+        </block>
     </category>
     `;
 };

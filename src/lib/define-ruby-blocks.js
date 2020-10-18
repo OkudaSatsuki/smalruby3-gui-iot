@@ -1044,5 +1044,22 @@ export default function (ScratchBlocks) {
         }
     };
 
+    ScratchBlocks.Blocks.mrubyc_rboard_sermista_measure = {
+        init: function () {
+            this.jsonInit({
+                type: 'mrubyc_rboard_sermista_measure',
+                message0: '%1に測った温度を格納する(サーミスタ温度センサ)',
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'VARIABLE'
+                    }
+                ],
+                category: ScratchBlocks.Categories.ruby,
+                extensions: ['colours_rboard', 'shape_statement']
+            });
+        }
+    };
+
     return ScratchBlocks;
 }
