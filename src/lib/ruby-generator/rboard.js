@@ -148,5 +148,10 @@ export default function (Generator) {
         return `${variable}.start\n${variable} = ${variable}.read_v\n${variable}.stop\n`;
     };
 
+    Generator.mrubyc_rboard_sermista_use = function (block) {
+        const variable = Generator.valueToCode(block, 'VARIABLE') || null;
+        return `${variable} = ADC.new()\n${variable}.ch(7)\n`;
+    };
+
     return Generator;
 }
